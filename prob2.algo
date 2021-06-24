@@ -1,0 +1,33 @@
+ALGORITHM comp_elt
+VAR
+    arr1, arr2 : arrayof INTEGER[10];
+    i,j,n, m, sum : INTEGER;
+   
+BEGIN
+write ("donner le nombre d'elements de arr1");
+Read (n);
+
+write ("donner le nombre d'elements de arr2");
+Read (m);
+
+FOR i FROM 1 to n step 1 do
+read(arr1[i]);
+END_FOR
+
+
+FOR i FROM 1 to m step 1 do
+read(arr2[i]);
+END_FOR
+sum = 0;
+
+FOR i FROM 1 to n step 1 do
+FOR j FROM 1 to m step 1 do
+IF (arr1[i] = arr2[j]) THEN
+BREAK;
+END_FOR
+sum = sum + arr[i];
+END_FOR
+
+Write ( sum);
+
+END
